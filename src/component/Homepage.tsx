@@ -1,7 +1,22 @@
-import React from "react";
+import YoutubeCard from "./YoutubeCard";
 
-function Homepage() {
-  return <div>Hey</div>;
+type HomepageProps = {
+  videoList: any[];
+};
+
+function Homepage({ videoList }: HomepageProps) {
+  return (
+    <div>
+      {videoList.map((youtubeVideo: { url: string; uploader: string }) => {
+        return (
+          <YoutubeCard
+            url={youtubeVideo.url}
+            userName={youtubeVideo.uploader}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default Homepage;
