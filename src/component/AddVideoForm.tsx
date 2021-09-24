@@ -1,16 +1,20 @@
 import React, { useCallback, useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 type AddVideoFormProps = {
   onChange: (url: string) => void;
 };
 
 function AddVideoForm({ onChange }: AddVideoFormProps) {
+  const history = useHistory();
+
   const [videoUrl, setVideoUrl] = useState("");
 
   const handleSubmit = useCallback(() => {
     onChange(videoUrl);
-  }, [onChange, videoUrl]);
+    history.push("/");
+  }, [history, onChange, videoUrl]);
 
   const handleChange = useCallback((value: any) => {
     setVideoUrl(value.target.value);
@@ -22,7 +26,7 @@ function AddVideoForm({ onChange }: AddVideoFormProps) {
         <Form.Control
           size="lg"
           type="text"
-          placeholder="Large text"
+          placeholder="Share your URL here"
           onChange={handleChange}
         />
         <br />
