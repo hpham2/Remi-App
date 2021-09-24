@@ -5,6 +5,7 @@ import Homepage from "./component/Homepage";
 import SignUpOrSignInForm, { User } from "./component/SignupOrSignInForm";
 import { content } from "./database";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function App() {
   const [videoList, setVideoList] = useState(content.videos);
@@ -35,12 +36,30 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <SignUpOrSignInForm
-              userList={userList}
-              onChange={handleSignUpOrSignInChange}
-            ></SignUpOrSignInForm>
+            {!currentUser && (
+              <SignUpOrSignInForm
+                userList={userList}
+                onChange={handleSignUpOrSignInChange}
+              ></SignUpOrSignInForm>
+            )}
 
-            {currentUser && <Link to="/share">Share</Link>}
+            {currentUser && (
+              <>
+                <Button
+                  variant="outline-primary"
+                  style={{ marginRight: "15px" }}
+                >
+                  <Link to="/share">Share</Link>
+                </Button>
+                <Button
+                  variant="danger"
+                  type="submit"
+                  onClick={() => setCurrentUser(undefined)}
+                >
+                  Log out
+                </Button>
+              </>
+            )}
 
             <Homepage videoList={videoList}></Homepage>
           </Route>
