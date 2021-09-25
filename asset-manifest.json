@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Remitano_project/static/css/main.04124539.chunk.css",
+    "main.js": "/Remitano_project/static/js/main.fafdffe1.chunk.js",
+    "main.js.map": "/Remitano_project/static/js/main.fafdffe1.chunk.js.map",
+    "runtime-main.js": "/Remitano_project/static/js/runtime-main.aeee1516.js",
+    "runtime-main.js.map": "/Remitano_project/static/js/runtime-main.aeee1516.js.map",
+    "static/js/2.296ecf0f.chunk.js": "/Remitano_project/static/js/2.296ecf0f.chunk.js",
+    "static/js/2.296ecf0f.chunk.js.map": "/Remitano_project/static/js/2.296ecf0f.chunk.js.map",
+    "index.html": "/Remitano_project/index.html",
+    "static/css/main.04124539.chunk.css.map": "/Remitano_project/static/css/main.04124539.chunk.css.map",
+    "static/js/2.296ecf0f.chunk.js.LICENSE.txt": "/Remitano_project/static/js/2.296ecf0f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aeee1516.js",
+    "static/js/2.296ecf0f.chunk.js",
+    "static/css/main.04124539.chunk.css",
+    "static/js/main.fafdffe1.chunk.js"
+  ]
+}
