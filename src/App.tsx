@@ -4,7 +4,7 @@ import AddVideoForm from "./component/AddVideoForm";
 import Homepage from "./component/Homepage";
 import SignUpOrSignInForm, { User } from "./component/SignupOrSignInForm";
 import { content } from "./database";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Button, Container, Row } from "react-bootstrap";
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/">
             <Container>
