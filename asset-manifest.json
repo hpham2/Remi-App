@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/Remi_App/static/css/main.04124539.chunk.css",
-    "main.js": "/Remi_App/static/js/main.fafdffe1.chunk.js",
-    "main.js.map": "/Remi_App/static/js/main.fafdffe1.chunk.js.map",
+    "main.js": "/Remi_App/static/js/main.64b6b5b9.chunk.js",
+    "main.js.map": "/Remi_App/static/js/main.64b6b5b9.chunk.js.map",
     "runtime-main.js": "/Remi_App/static/js/runtime-main.577c1a4a.js",
     "runtime-main.js.map": "/Remi_App/static/js/runtime-main.577c1a4a.js.map",
-    "static/js/2.9f468fb8.chunk.js": "/Remi_App/static/js/2.9f468fb8.chunk.js",
-    "static/js/2.9f468fb8.chunk.js.map": "/Remi_App/static/js/2.9f468fb8.chunk.js.map",
+    "static/js/2.dfb5be4d.chunk.js": "/Remi_App/static/js/2.dfb5be4d.chunk.js",
+    "static/js/2.dfb5be4d.chunk.js.map": "/Remi_App/static/js/2.dfb5be4d.chunk.js.map",
     "index.html": "/Remi_App/index.html",
     "static/css/main.04124539.chunk.css.map": "/Remi_App/static/css/main.04124539.chunk.css.map",
-    "static/js/2.9f468fb8.chunk.js.LICENSE.txt": "/Remi_App/static/js/2.9f468fb8.chunk.js.LICENSE.txt"
+    "static/js/2.dfb5be4d.chunk.js.LICENSE.txt": "/Remi_App/static/js/2.dfb5be4d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.577c1a4a.js",
-    "static/js/2.9f468fb8.chunk.js",
+    "static/js/2.dfb5be4d.chunk.js",
     "static/css/main.04124539.chunk.css",
-    "static/js/main.fafdffe1.chunk.js"
+    "static/js/main.64b6b5b9.chunk.js"
   ]
 }
