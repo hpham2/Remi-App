@@ -12,14 +12,17 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ===============================
+
 **Disclaimer**
+
 Since this is completely a frontend app, no backend is
 supported.
 Thus please **do not** refresh the app, otherwise you will lose
 what you just added.
+
 ===============================
 
-App work flow:
+## App work flow:
 
 1. App display the home page and login form.
 2. You need to log in in order to share the video. App will show error when you have an invalid input when sign up or log in.
@@ -35,7 +38,8 @@ Launches the test runner in the interactive watch mode.\
 For details of test:
 
 - Go to folder `src/__test__`
-- You can find there: unit test and integration test.
+- You can find there: **unit test** and **integration test**.
 
 **In case the app does not work as described, feel free to contact me via this email:**
----> **phamhoangtrunghai@gmail.com**
+
+---> **phamhoangtrunghai@gmail.com** <---
