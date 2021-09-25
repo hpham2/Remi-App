@@ -30,7 +30,8 @@ function SignUpOrSignInForm({ userList, onChange }: SignUpOrSignInFormProps) {
   const handleSignUpSubmit = useCallback(() => {
     if (
       email !== "" &&
-      userList.findIndex((user) => user.email === email) === -1
+      userList.findIndex((user) => user.email === email) === -1 &&
+      password !== ""
     ) {
       const newUser = {
         id: Math.random() * 10000000,
@@ -42,6 +43,8 @@ function SignUpOrSignInForm({ userList, onChange }: SignUpOrSignInFormProps) {
     } else {
       email === ""
         ? setError("Please enter your email!")
+        : password === ""
+        ? setError("Please enter your password!")
         : setError("This user alreadys exists!");
     }
   }, [email, onChange, password, userList]);
@@ -62,8 +65,9 @@ function SignUpOrSignInForm({ userList, onChange }: SignUpOrSignInFormProps) {
     <div style={{ width: "40%" }}>
       {error !== "" && <Alert variant="danger">{error}</Alert>}
       <Form.Group className="mb-3">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label htmlFor="email-form">Email address</Form.Label>
         <Form.Control
+          id="email-form"
           type="email"
           placeholder="Enter email"
           onChange={handleEmailChange}
@@ -71,8 +75,9 @@ function SignUpOrSignInForm({ userList, onChange }: SignUpOrSignInFormProps) {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Password</Form.Label>
+        <Form.Label htmlFor="password">Password</Form.Label>
         <Form.Control
+          id="password"
           type="password"
           placeholder="Password"
           onChange={handlePasswordChange}
