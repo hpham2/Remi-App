@@ -23,7 +23,11 @@ function AddVideoForm({ onChange }: AddVideoFormProps) {
   return (
     <div style={{ width: "50%" }}>
       <>
+        <Form.Label htmlFor="url-form">
+          Add your URL in the form below:
+        </Form.Label>
         <Form.Control
+          id="url-form"
           size="lg"
           type="text"
           placeholder="Share your URL here"
