@@ -12,8 +12,10 @@ function AddVideoForm({ onChange }: AddVideoFormProps) {
   const [videoUrl, setVideoUrl] = useState("");
 
   const handleSubmit = useCallback(() => {
-    onChange(videoUrl);
-    history.push("/");
+    if (videoUrl !== "") {
+      onChange(videoUrl);
+      history.push("/");
+    }
   }, [history, onChange, videoUrl]);
 
   const handleChange = useCallback((value: any) => {
