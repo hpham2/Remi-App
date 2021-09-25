@@ -28,7 +28,10 @@ function SignUpOrSignInForm({ userList, onChange }: SignUpOrSignInFormProps) {
   }, []);
 
   const handleSignUpSubmit = useCallback(() => {
-    if (userList.findIndex((user) => user.email === email) === -1) {
+    if (
+      email !== "" &&
+      userList.findIndex((user) => user.email === email) === -1
+    ) {
       const newUser = {
         id: Math.random() * 10000000,
         email,
@@ -37,7 +40,9 @@ function SignUpOrSignInForm({ userList, onChange }: SignUpOrSignInFormProps) {
       onChange(newUser);
       setError("");
     } else {
-      setError("This user alreadys exists!");
+      email === ""
+        ? setError("Please enter your email!")
+        : setError("This user alreadys exists!");
     }
   }, [email, onChange, password, userList]);
 
@@ -54,7 +59,7 @@ function SignUpOrSignInForm({ userList, onChange }: SignUpOrSignInFormProps) {
   }, [email, onChange, password, userList]);
 
   return (
-    <div style={{ width: "50%" }}>
+    <div style={{ width: "40%" }}>
       {error !== "" && <Alert variant="danger">{error}</Alert>}
       <Form.Group className="mb-3">
         <Form.Label>Email address</Form.Label>
@@ -76,7 +81,7 @@ function SignUpOrSignInForm({ userList, onChange }: SignUpOrSignInFormProps) {
       <br />
 
       <Button
-        variant="primary"
+        variant="outline-primary"
         type="submit"
         onClick={handleSignInSubmit}
         style={{ marginRight: "15px" }}
