@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import Homepage from "../component/Homepage";
 import SignUpOrSignInForm from "../component/SignupOrSignInForm";
 import { content } from "../database";
 
@@ -109,5 +110,18 @@ describe("Tests of Log in form", () => {
     fireEvent.click(signinButton);
 
     expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+  });
+});
+
+describe("Tests of videos list", () => {
+  test("Videos' description are rendered", async () => {
+    render(<Homepage videoList={content.videos} />);
+
+    expect(await screen.findByText("Vietnam - From Above")).toBeInTheDocument();
+    expect(
+      await screen.findByText(
+        /Ho Chi Minh City Nightlife Area, Clubs and Bars/i
+      )
+    ).toBeInTheDocument();
   });
 });
